@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="SGame8.css" rel="stylesheet">
+    <meta charset="UTF-8">
+ 
+</head>
+<body>
+   
+
+    
+    <div class="game">
+        <div id="dino"></div>
+        <div id="cactus"></div>
+    </div>
+    <div class="nety"><h2>Google created the game in 2014 for the Chrome browser. 
+        It appears when users have opened a browser without an internet connection. 
+        The goal is to pass the time. A Chrome engineer named Edward Jung noted that the T-Rex dinosaur is launched more than 27 million times every month!
+        The main character is a pixel dinosaur. But why was it not a little man or a turtle that became the hero? 
+        Chrome designer Sebastian Gabriel explained that the game invites the user to move to a prehistoric era when no one knew about the existence of the Internet. 
+        It turned out very symbolic.</h2></div>    
+
+    <script>
+ 
+        const dino = document.getElementById("dino");
+        const cactus = document.getElementById("cactus");
+
+        document.addEventListener("keydown", function(event){
+            jump();
+        })
+
+        function jump(){
+            if(dino.classList != "jump"){
+                dino.classList.add("jump")
+            }
+            setTimeout(function(){
+                dino.classList.remove("jump")
+            }, 300)
+        }
+
+        let isAlive = setInterval (function(){
+            let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"))
+            let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"))
+
+            if(cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140){
+                alert("Game Over!!!!")
+            }
+        }, 10)
+        
+
+    </script>
+
+</body>
+</html>

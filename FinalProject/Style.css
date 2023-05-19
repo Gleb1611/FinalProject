@@ -1,0 +1,49 @@
+*{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(0, 0, 8);
+}
+
+.title{
+    position: absolute;
+    width: 99%;
+    height: 100px;
+    border-bottom: 1px solid white;
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    position: absolute;
+    width: 99%;
+    height: 610px;
+    top: 215px;
+}
+
+.wgame1{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    color: white;
+    size: 10px;
+    font-size:3em;
+    text-align: space-between;
+}
+
+.wgame{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    size: 20px;
+    font-size:1.3em;
+}
+
+.wgame4{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    size: 20px;
+    font-size:1.3em;
+}
